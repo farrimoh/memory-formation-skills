@@ -73,6 +73,8 @@ Start with the default schema:
 - `NEXT_STEPS.md`
 - `LEARNINGS.md`
 
+Use `templates/` in this skill folder as optional starting points when creating memory files.
+
 Treat templates as starting points, not fixed forms. Personalize memory at three levels:
 
 - Schema level: choose which memory files should exist.

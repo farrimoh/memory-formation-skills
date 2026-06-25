@@ -16,13 +16,14 @@ It is a minimal, Markdown-based workflow for Codex, Claude Code, Cursor, and oth
 ## Repository Layout
 
 ```text
-skills/memory-formation/SKILL.md
-templates/
-  CURRENT_STATUS.md
-  DECISIONS.md
-  OPEN_QUESTIONS.md
-  NEXT_STEPS.md
-  LEARNINGS.md
+skills/memory-formation/
+  SKILL.md
+  templates/
+    CURRENT_STATUS.md
+    DECISIONS.md
+    OPEN_QUESTIONS.md
+    NEXT_STEPS.md
+    LEARNINGS.md
 examples/
   frontend/
   ml-project/
