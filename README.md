@@ -10,6 +10,7 @@ It is a minimal, Markdown-based workflow for Codex, Claude Code, Cursor, and oth
 - Selects a lightweight memory schema that fits the project instead of forcing one universal structure.
 - Adapts files, sections, and content to the project instead of copying templates blindly.
 - Updates memory at the end of a session with status, completed work, decisions, failed approaches, open questions, next steps, and lessons learned.
+- Lets users choose when memory is off, read-only, initialized, or updated.
 - Keeps memory in plain Markdown so it can be reviewed, edited, committed, copied, or ignored like any other project file.
 
 ## Repository Layout
@@ -52,6 +53,30 @@ Use the memory-formation skill to update project memory for this session.
 ```
 
 The agent should update only durable, useful context. It should not create a transcript of the session.
+
+## User Control
+
+Memory updates are opt-in by default. The skill should not clutter memory with every session.
+
+Use phrases like:
+
+```text
+Use memory read-only for this session.
+```
+
+```text
+Do not update memory today.
+```
+
+```text
+Update project memory before we stop.
+```
+
+```text
+Ignore project memory for this task.
+```
+
+The agent should honor those instructions. If memory is off, it should not create hidden notes or deferred updates. If memory is read-only, it may use existing memory for context but must not change memory files.
 
 ## Default Memory Files
 

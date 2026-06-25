@@ -7,6 +7,40 @@ description: Create and maintain a project-specific Markdown memory system for l
 
 Use this skill to create and update a lightweight project memory system. Memory is selective: preserve durable context that helps the next agent make better decisions, not a transcript of everything that happened.
 
+## Memory Modes
+
+Memory is elective. Do not assume every session should read or write project memory.
+
+- `Memory off`: Do not read or write project memory unless the user explicitly asks. Use this for exploratory, private, noisy, or low-value sessions.
+- `Read-only memory`: Read existing memory for context, but do not modify memory files.
+- `Update memory`: Read existing memory when useful and update durable memory at the end of the session.
+- `Initialize memory`: Create or restructure the project memory system.
+
+Default to opt-in updates:
+
+- Initialize memory only when requested.
+- Update memory only when requested or when the repository has an explicit memory policy requiring end-of-session updates.
+- Resume from memory only when requested or when the project workflow clearly names memory as the session state source.
+
+Honor user control phrases:
+
+- "Do not update memory this session."
+- "Use memory read-only."
+- "Update memory at the end."
+- "Ignore project memory for this task."
+
+If memory is off, do not create shadow notes, hidden summaries, or deferred memory updates. If memory is read-only, do not modify memory files. If the session produced a major durable change but memory updates are off, mention in the final response that memory was not updated.
+
+## Workflow 0: Begin Session From Memory
+
+Use this workflow only when the user asks to resume from memory or the repository has an explicit memory policy that makes memory the session state source.
+
+1. Locate the project memory folder.
+2. Read the current status, next steps, open questions, decisions, and learnings that are relevant to the requested task.
+3. State the current goal, blocker if any, next action, and completed work that should not be repeated.
+4. Continue from the recorded next action unless the user gives a newer instruction.
+5. Do not update memory unless the session is also in `Update memory` mode.
+
 ## Workflow 1: Initialize Memory
 
 1. Inspect the repository structure, package files, docs, tests, examples, and active branches if available.
