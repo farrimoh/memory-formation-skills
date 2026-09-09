@@ -7,6 +7,12 @@ description: Create and maintain a project-specific Markdown memory system for l
 
 Use this skill to create, reuse, and update lightweight project memory. Memory formation means deciding what deserves to become durable project knowledge. Reason before writing: preserve knowledge that helps future work, not a transcript or compressed account of everything that happened.
 
+## Scope And Decision Records
+
+This skill selects knowledge for future work; it does not define approval boundaries or obtain authorization for implementation. A decision worth remembering may be a routine technical choice, a user decision, or an outcome recorded by a separate collaboration protocol.
+
+If the project also uses `keep-me-in-the-loop`, its policy and decision log own approval boundaries and human decision status. Retain only the durable rationale or implications needed in memory, referencing the original entry by repo-relative path and decision ID instead of copying its proposal and approval history. Preserve whether a proposal is accepted, rejected, deferred, or pending; a memory entry is not evidence of approval. Neither skill requires the other.
+
 ## Workflow 1: Initialize Memory
 
 1. Inspect existing project memory, repository structure, package files, docs, tests, examples, and active branches if available. Reuse an established memory location rather than creating a parallel set of notes.

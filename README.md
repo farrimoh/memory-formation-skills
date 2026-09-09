@@ -11,6 +11,8 @@ When a coding-agent session ends, what should a future agent inherit, and what s
 
 This skill is a small, inspectable Markdown protocol for long-running software projects. It guides three decisions: **selection** (what to retain), **organization** (where it belongs), and **adaptation** (which structure fits this project as it evolves). The goal is selective retention that improves future agent behavior without accumulating unnecessary context. Existing project notes can serve as memory; the skill supplies a selection and maintenance protocol.
 
+The companion **keep-me-in-the-loop** skill manages agreed boundaries for human decisions during work. Memory formation selects knowledge that should survive into future sessions. Both can record decisions: the collaboration log records proposals and human responses, while memory retains selected rationale, findings, and implications. When used together, memory references the original decision entry and preserves its status; recording something in memory does not approve it. Each skill works independently.
+
 [Install](#install) · [Quick start](#quick-start) · [Project-specific memory](#project-specific-memory) · [Evaluating the idea](#evaluating-the-idea)
 
 ## What It Does
