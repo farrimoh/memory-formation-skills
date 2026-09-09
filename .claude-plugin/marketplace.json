@@ -1,0 +1,14 @@
+{
+  "name": "memory-formation",
+  "owner": {
+    "name": "Memory Formation contributors"
+  },
+  "description": "A lightweight project memory formation skill for Claude Code.",
+  "plugins": [
+    {
+      "name": "memory-formation",
+      "source": "./",
+      "description": "Select and maintain durable project knowledge in project-specific Markdown memory."
+    }
+  ]
+}

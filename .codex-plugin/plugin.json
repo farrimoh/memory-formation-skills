@@ -1,0 +1,30 @@
+{
+  "name": "memory-formation",
+  "version": "1.0.0",
+  "description": "Select and maintain durable project knowledge in project-specific Markdown memory.",
+  "author": {
+    "name": "Memory Formation contributors"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "project-memory",
+    "memory-formation",
+    "coding-agents",
+    "selective-retention"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Memory Formation",
+    "shortDescription": "Form useful project memory through selective retention",
+    "longDescription": "Decide what deserves durable project memory, reconcile existing knowledge, and adapt its Markdown structure as the project evolves.",
+    "developerName": "Memory Formation contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use memory-formation to update this project's durable memory."
+    ]
+  }
+}

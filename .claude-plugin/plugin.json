@@ -1,0 +1,17 @@
+{
+  "name": "memory-formation",
+  "version": "1.0.0",
+  "description": "Select and maintain durable project knowledge in project-specific Markdown memory.",
+  "author": {
+    "name": "Memory Formation contributors"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "project-memory",
+    "memory-formation",
+    "coding-agents",
+    "selective-retention"
+  ],
+  "skills": "./skills/",
+  "displayName": "Memory Formation"
+}

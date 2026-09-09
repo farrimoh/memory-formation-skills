@@ -1,0 +1,20 @@
+{
+  "name": "memory-formation",
+  "interface": {
+    "displayName": "Memory Formation"
+  },
+  "plugins": [
+    {
+      "name": "memory-formation",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

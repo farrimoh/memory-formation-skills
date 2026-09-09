@@ -1,12 +1,14 @@
 # Current Status
 
+Illustrative snapshot after the sessions described in the [README](../../README.md#worked-example). Report paths refer to the fictional project.
+
 ## Snapshot
 
 - Project: Particle simulation code for parameter sweep studies.
-- Date: 2026-06-25
-- Current focus: Verify energy conservation after integrator changes.
-- Working state: Small deterministic runs complete and produce stable output files.
-- Known broken state: Long runs still show energy drift above the expected tolerance.
+- Date: 2026-06-29
+- Current focus: Validate high-density configurations after correcting the boundary update.
+- Working state: Short and long standard-density runs pass the energy-drift tolerance with boundary implementation v2.
+- Known broken state: None in the tested configurations; high-density behavior remains unverified.
 
 ## Active Context
 
@@ -17,17 +19,16 @@
 
 ## Recent Completed Work
 
-- Added a deterministic short-run validation case.
-- Confirmed the new integrator improves stability for small step sizes.
+- Corrected the boundary update after timestep reduction alone failed to resolve long-run drift.
+- Replaced the prior long-run failure status using paired validation in `reports/validation/paired-boundary-v2.md`; see [Learnings](LEARNINGS.md) for scope and the superseded explanation.
 
 ## Validation
 
-- Checks run: deterministic short-run validation; existing unit tests.
-- Passing: Unit tests and small-step validation.
-- Failing: Long-run drift tolerance.
+- Checks run: Existing unit tests; paired boundary-v1/v2 runs with identical seeds, original timestep, density, and run length.
+- Passing: Unit tests, short-run validation, and standard-density long-run tolerance with boundary v2.
+- Failing: Boundary-v1 control still exceeds long-run tolerance.
 - Not yet verified: Sweep behavior across high-density configurations.
 
 ## Notes For Next Agent
 
-- Resume by comparing long-run drift between old and new integrators using the same seed and timestep.
-
+- Resume with paired high-density validation; do not treat standard-density results as validation of the full sweep.
